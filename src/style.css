@@ -74,3 +74,34 @@
 .dangerprimary:hover{background:#ce3038}
 @keyframes modalFade{from{opacity:0}to{opacity:1}}@keyframes modalRise{from{transform:translateY(10px) scale(.98)}to{transform:translateY(0) scale(1)}}
 @media(max-width:560px){.aventomodal{padding:22px}.collectionappgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+
+/* v0.5 command center and refinement */
+:root{--avento-blue:#2563eb;--avento-border:#e5ebf4}
+body{background:#f7f9fd}
+.main{animation:pageEnter .22s ease}
+@keyframes pageEnter{from{opacity:.7;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.topbar{box-shadow:0 2px 15px #172f5a06}
+.navitem{transition:background .15s,color .15s}
+.quickapp,.doccard,.catalogtile,.homecollections button{box-shadow:0 3px 12px #1b427408}
+.quickapp:hover,.doccard:hover,.catalogtile:hover{border-color:#c7d9fa}
+.kindfilter{border:1px solid #e3eaf5;border-radius:8px;padding:9px 10px;color:#60738d;background:white;font-size:12px;max-width:140px}
+.savestatus{display:inline-flex;align-items:center;gap:5px;font-weight:700;color:#8595a9}
+.savestatus.saved{color:#19865c}
+.savestatus.unsaved{color:#cb8434}
+.savestatus.saving{color:#3975d6}
+.palettebackdrop{align-items:start;padding-top:min(15vh,140px);z-index:120}
+.commandpalette{width:min(100%,590px);border:1px solid #dfe8f7;border-radius:18px;background:white;box-shadow:0 30px 100px #0e2d6050;overflow:hidden;animation:modalRise .2s ease}
+.commandsearch{display:flex;align-items:center;gap:13px;padding:19px 22px;border-bottom:1px solid #edf1f7;color:#6284bc}
+.commandsearch input{flex:1;min-width:0;border:0;outline:none;font-size:15px;color:#253a5a}
+.commandsearch kbd{border:1px solid #e2e8f1;background:#f6f8fc;border-radius:6px;padding:5px 7px;font-size:10px;color:#94a1b3}
+.commandresults{padding:12px;max-height:430px;overflow:auto}
+.commandgroup{font-size:10px;font-weight:800;letter-spacing:1.4px;color:#a4afbf;margin:12px 10px 8px}
+.commandresults button{width:100%;border:0;background:transparent;border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:13px;text-align:left;color:#3b4e68}
+.commandresults button:hover,.commandresults button:focus-visible{background:#edf4ff}
+.commandresults button>span:first-child{width:36px;height:36px;border-radius:9px;display:grid;place-items:center;flex-shrink:0}
+.commandresults button strong{font-size:13px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.commandresults button>svg,.commandtype{color:#a2aec0;font-size:11px}
+.commandresults>p{padding:15px}
+.commandfooter{border-top:1px solid #edf1f7;padding:13px 22px;display:flex;align-items:center;gap:8px;color:#9aa8bb;font-size:11px;background:#fbfcff}
+@media(max-width:700px){.palettebutton{display:none}.kindfilter{max-width:115px}.commandpalette{margin:0 8px}.palettebackdrop{padding:80px 10px 10px}}
