@@ -44,3 +44,33 @@
 .collectionbadge{width:43px;height:43px;border-radius:11px;background:#edf3ff;color:#2867d9;display:grid;place-items:center}
 @media(max-width:800px){.collectiontitle{align-items:flex-start;flex-direction:column}.collectionbuttons{flex-wrap:wrap}.pickergrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){.pickergrid{grid-template-columns:1fr}.collectionworkspace{padding:16px}.collectionbuttons .secondary{font-size:11px;padding:9px}}
+
+
+/* Avento interaction refresh */
+.collectionworkspace{box-shadow:0 8px 35px #224b8c0c;border-radius:18px}
+.collectionapp.appdraggable{position:relative;display:flex;gap:0;padding:7px 8px 10px;min-height:177px;cursor:grab}
+.collectionapp.appdraggable:active{cursor:grabbing}
+.collectionapp.ispinned{border-color:#b5cdfa;background:linear-gradient(180deg,#f3f7ff,#fff 80%)}
+.collectionapp.isdragging{opacity:.4;outline:2px dashed #3473e3}
+.appdraghead{display:flex;justify-content:space-between;align-items:center;width:100%;color:#a1afc2;height:22px}
+.appdraghead button,.appmove button{border:0;background:none;border-radius:6px;color:#9aabc1;display:grid;place-items:center;padding:5px}
+.appdraghead button:hover,.appmove button:hover{background:#eaf1ff;color:#2563eb}
+.appdraghead .pinnedbtn{color:#2563eb;background:#eaf1ff}
+.appdraggablemain{display:flex;flex:1;align-items:center;justify-content:center;flex-direction:column;gap:8px;border:0;background:none;width:100%;padding:3px 0;color:#24344d}
+.appdraggablemain strong{font-size:13px}
+.appdraggablemain small{color:#8c9bb0;font-size:10px}
+.appmove{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;border-top:1px solid #eef2f8;padding-top:6px}
+.appmove button:disabled{opacity:.25;cursor:default}
+.modalbackdrop{position:fixed;inset:0;background:#10244975;backdrop-filter:blur(5px);display:grid;place-items:center;padding:20px;z-index:100;animation:modalFade .15s ease}
+.aventomodal{background:#fff;width:min(100%,435px);border-radius:20px;box-shadow:0 30px 90px #0d254b35;padding:28px;animation:modalRise .18s ease}
+.modalhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.modalicon{display:grid;place-items:center;height:48px;width:48px;border-radius:14px;background:#edf3ff;color:#2563eb}
+.aventomodal h2{font-size:21px;margin:0 0 10px;letter-spacing:-.5px}
+.aventomodal p{font-size:13px;color:#77879d;line-height:1.7;margin:0 0 24px}
+.modallabel{display:grid;gap:9px;font-size:12px;font-weight:700;color:#344862}
+.modallabel input{width:100%;border:1px solid #dce5f1;background:#fbfcff;border-radius:10px;padding:13px 14px;color:#223a59}
+.modalactions{display:flex;justify-content:flex-end;gap:10px;margin-top:26px}
+.dangerprimary{background:#e5484d;border-color:#e5484d}
+.dangerprimary:hover{background:#ce3038}
+@keyframes modalFade{from{opacity:0}to{opacity:1}}@keyframes modalRise{from{transform:translateY(10px) scale(.98)}to{transform:translateY(0) scale(1)}}
+@media(max-width:560px){.aventomodal{padding:22px}.collectionappgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
