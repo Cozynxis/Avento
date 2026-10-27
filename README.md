@@ -14,3 +14,5 @@ Gratis webgebaseerde Office-suite met Write, Sheets, Slides en Notes.
 De eerste versie bevat authenticatie, dashboard, app-launcher en een eenvoudige tekstbasis voor de vier apps. Dit zijn nog **geen volledige Office-editors**. Voor het opslaan moet de database-migratie in Supabase zijn uitgevoerd.
 
 De service-role key hoort **nooit** in frontendcode of GitHub.
+
+<!-- Redeploy after Supabase email confirmation setting update. -->
